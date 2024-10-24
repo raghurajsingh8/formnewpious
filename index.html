@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1 class="first-heading">Newpious Synergies</h1>
+<form id="dynamicForm" name="goggle-sheet" action="https://script.google.com/macros/s/AKfycbw-9-BCYLaM3-C4phvezylMtuvsRQmuVtDLMN8_yWJA4pgMwIl6TAwFlVXjosjvH_Smqw/exec " method="post">  <!-- First question -->
+    <label for="systemType">Type of System:</label>
+  <select id="systemType" name="systemType" required>
+    <option value="">Select</option>
+    <option value="on_grid">ON GRID</option>
+    <option value="off_grid">OFF GRID</option>
+    <option value="hybrid">Hybrid</option>
+    <option value="flour_mill">Flour Mill Atta Chakki</option>
+    <option value="solar_pump">Solar Pump</option>
+    <option value="existing_plant">Existing Plant</option>
+  </select>
+
+  <!-- General Questions (common for all) -->
+  <div id="generalQuestions">
+    <h3>PROJECT DESIGN INPUTS</h3>
+    <label for="capacity">Plant Expected Capacity:</label>
+    <input type="text" id="capacity" name="capacity"  required><br>
+
+    <label for="siteAddress">Site Address:</label>
+    <input type="text" id="siteAddress" name="siteAddress"  required><br>
+
+    <label for="googleCoordinates">Google Coordinates:</label>
+    <input type="text" id="googleCoordinates" name="googleCoordinates"><br>
+
+    <label for="availableArea">Total Available Area (Approx sq. ft):</label>
+    <input type="text" id="availableArea" name="availableArea"  required><br>
+
+    <h3>DETAILED SKETCH</h3>
+    <label for="parapet">Parapet Railing Wall Height and Width:</label>
+    <input type="text" id="parapet" name="parapet"  required><br>
+
+    <label for="roofType">Roof Type:</label>
+    <select id="roofType" name="roofType" required>
+      <option value="rcc">RCC</option>
+      <option value="tin_shed">Tin Shed</option>
+      <option value="ground">Ground</option>
+      <option value="both">Both</option>
+    </select><br>
+
+    <label for="floors">No of Floors & Height:</label>
+    <input type="text" id="floors" name="floors"  required><br>
+
+    <label for="dcCable">DC Cable Size (sq mm) & Length (ft):</label>
+    <input type="text" id="dcCable" name="dcCable" required><br>
+
+    <label for="acCableType">AC Cable Type:</label>
+    <select id="acCableType" name="acCableType"  required>
+      <option value="aluminium">Aluminium</option>
+      <option value="copper">Copper</option>
+    </select><br>
+
+    <label for="acCableSize">AC Cable Size (sq mm) & Length (ft):</label>
+    <input type="text" id="acCableSize" name="acCableSize"  required><br>
+
+    <label for="earthingCableType">Earthing Cable Type:</label>
+    <select id="earthingCableType" name="earthingCableType"  required>
+      <option value="aluminium">Aluminium</option>
+      <option value="copper">Copper</option>
+    </select><br>
+
+    <label for="earthingCableSize">Earthing Cable Size (sq mm) & Length (ft):</label>
+    <input type="text" id="earthingCableSize" name="earthingCableSize"  required><br>
+
+    <label for="treeHeight">Specify Tree, Tower Height:</label>
+    <input type="text" id="treeHeight" name="treeHeight"  required><br>
+
+    <label for="earthPit">Number of Spare Earth Pit and Location:</label>
+    <input type="text" id="earthPit" name="earthPit"  required><br>
+
+    <label for="laHeight">LA, Height:</label>
+    <input type="text" id="laHeight" name="laHeight"  required><br>
+  </div>
+
+  <!-- Option 1: ELECTRICAL ASPECT for ON GRID/OFF GRID -->
+  <div id="electricalAspects" style="display: none;">
+    <h3>ELECTRICAL ASPECT</h3>
+    <label for="connectionType">Type of Connection:</label>
+    <select id="connectionType" name="connectionType"   required>
+      <option value="single">Single Phase</option>
+      <option value="three">Three Phase</option>
+      <option value="no_grid">No Grid</option>
+    </select><br>
+
+    <label for="discom">DISCOM:</label>
+    <input type="text" id="discom" name="discom" required><br>
+
+    <label for="meteringPoints">Total No of Metering Points:</label>
+    <input type="text" id="meteringPoints" name="meteringPoints" required><br>
+
+    <label for="ltPanel">LT Panel and ACDB Wire Size & Length:</label>
+    <input type="text" id="ltPanel" name="ltPanel" required><br>
+
+    <label for="inverterWire">ACDB and Inverter Wire Size & Length:</label>
+    <input type="text" id="inverterWire" name="inverterWire" required><br>
+
+    <label for="acdbRating">No of ACDB with Rating:</label>
+    <input type="text" id="acdbRating" name="acdbRating" required><br>
+
+    <label for="dcdbRating">No of DCDB with Rating:</label>
+    <input type="text" id="dcdbRating" name="dcdbRating" required><br>
+
+    <label for="inverter">No of Inverter with Make & Rating:</label>
+    <input type="text" id="inverter" name="inverter" required><br>
+
+    <label for="modules">No of Module with Make & Rating:</label>
+    <input type="text" id="modules" name="modules" required><br>
+
+    <label for="siteSurvey">Site Survey Done By:</label>
+    <input type="text" id="siteSurvey" name="siteSurvey" required><br>
+
+    <label for="checkedBy">Checked By:</label>
+    <input type="text" id="checkedBy" name="checkedBy" required><br>
+
+    <label for="preparedBy">Prepared By:</label>
+    <input type="text" id="preparedBy" name="preparedBy" required><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+    
+    <h3>Client Details</h3>
+    <label for="clientName">Client Name:</label>
+    <input type="text" id="clientName" name="clientName" required><br>
+<!-- 
+    <label for="clientContact">Client Contact Details:</label>
+    <input type="text" id="clientContact" name="clientContact" required><br> -->
+
+    <label for="mobile">Mobile No:</label>
+<input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile number" maxlength="10" pattern="[0-9]{10}" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+    <label for="email">Email Id:</label>
+    <input type="email" id="email" name="email" required><br> 
+  </div>
+
+  <!-- Option 2: Quotation and Subsidy Details for ON GRID -->
+  <div id="quotationSubsidy" style="display: none;" required>
+    <h3>QUOTATION AND SUBSIDY DETAILS</h3>
+    <label for="plantCost">SPV Plant Cost:</label>
+    <input type="text" id="plantCost" name="plantCost" required><br>
+
+    <label for="subsidyCentral">Subsidy Central Govt:</label>
+    <input type="text" id="subsidyCentral" name="subsidyCentral" required><br>
+
+    <label for="subsidyState">Subsidy State Govt:</label>
+    <input type="text" id="subsidyState" name="subsidyState" required><br>
+
+<!--     <h4>Client Details</h4>
+    <label for="clientName">Client Name:</label>
+    <input type="text" id="clientName" name="clientName"><br>
+
+    <label for="clientContact">Client Contact Details:</label>
+    <input type="text" id="clientContact" name="clientContact"><br>
+
+    <label for="mobile">Mobile No:</label>
+    <input type="text" id="mobile" name="mobile"><br>
+
+    <label for="email">Email Id:</label>
+    <input type="email" id="email" name="email"><br> -->
+  </div><!-- Option 3: Quotation and Subsidy Details for Solar Pump -->
+<div id="option3" style="display: none;">
+    <h3>Electrical Aspect</h3>
+    
+    <label for="connectionType">Type of Connection:</label>
+    <select id="connectionType" name="connectionType" required>
+        <option value="single">Single Phase</option>
+        <option value="three">Three Phase</option>
+        <option value="no_grid">No Grid</option>
+    </select><br>
+
+    <label for="discom">DISCOM:</label>
+    <input type="text" id="discom" name="discom" required><br>
+
+    <label for="gridVoltage">Grid Voltage & Amp:</label>
+    <input type="text" id="gridVoltage" name="gridVoltage" required><br>
+
+    <label for="motors">No of Motors, Rating & Make:</label>
+    <input type="text" id="motors" name="motors" required><br>
+
+    <label for="motorVoltage">Motor Amp & Voltage:</label>
+    <input type="text" id="motorVoltage" name="motorVoltage" required><br>
+
+    <label for="ltPanel">LT Panel and ACDB Wire Size & Length:</label>
+    <input type="text" id="ltPanel" name="ltPanel" required><br>
+
+    <label for="acdbWire">ACDB and VFD Wire Size & Length:</label>
+    <input type="text" id="acdbWire" name="acdbWire" required><br>
+
+    <label for="numAcdb">No of ACDB with Rating:</label>
+    <input type="text" id="numAcdb" name="numAcdb" required><br>
+
+    <label for="numDcdb">No of DCDB with Rating:</label>
+    <input type="text" id="numDcdb" name="numDcdb" required><br>
+
+    <label for="numVfd">No of VFD with Make & Rating:</label>
+    <input type="text" id="numVfd" name="numVfd" required><br>
+
+    <label for="numModules">No of Modules with Make & Rating:</label>
+    <input type="text" id="numModules" name="numModules" required><br>
+
+    <label for="siteSurvey">Site Survey Done By:</label>
+    <input type="text" id="siteSurvey" name="siteSurvey" required><br>
+
+    <label for="checkedBy">Checked By:</label>
+    <input type="text" id="checkedBy" name="checkedBy" required><br>
+
+    <label for="preparedBy">Prepared By:</label>
+    <input type="text" id="preparedBy" name="preparedBy" required><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+    
+<!--     <h4>Client Details</h4>
+    <label for="clientName">Client Name:</label>
+    <input type="text" id="clientName" name="clientName"><br>
+
+    <label for="clientContact">Client Contact Details:</label>
+    <input type="text" id="clientContact" name="clientContact"><br>
+
+    <label for="mobileNo">Mobile No:</label>
+    <input type="text" id="mobileNo" name="mobileNo"><br>
+
+    <label for="emailId">Email Id:</label>
+    <input type="email" id="emailId" name="emailId"><br> -->
+</div>
+
+
+<!-- Option 4: Quotation and Subsidy Details for Existing Plant -->
+<div id="option4" style="display: none;">
+    <h3>Quotation and Subsidy Details</h3>
+
+    <label for="spvPlantCost">SPV Plant Cost:</label>
+    <input type="text" id="spvPlantCost" name="spvPlantCost" required><br>
+
+    <label for="remarks">Remarks:</label>
+    <textarea id="remarks" name="remarks" rows="4" cols="50" required></textarea><br>
+
+    <h3>Client Details</h3>
+    
+    <label for="clientName">Client Name:</label>
+    <input type="text" id="clientName" name="clientName" required><br>
+
+<!--     <label for="clientContact">Client Contact Details:</label>
+    <input type="text" id="clientContact" name="clientContact" required><br> -->
+
+    <label for="mobile">Mobile No:</label>
+<input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile number" maxlength="10" pattern="[0-9]{10}" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+
+    <label for="emailId">Email Id:</label>
+    <input type="email" id="emailId" name="emailId" required><br>
+</div>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit</button>
+</form>
+   <center>
+   <div class="card">
+    <img src="https://newpious.com/wp-content/uploads/2023/04/logo_211__1_-removebg-preview-1.png" alt="Newpious Logo" class="logo">
+    <h2>Contact Us</h2>
+    <p class="description">For over 20 years, we have been a trusted provider of Solar System/Services in India. Our expert team delivers sustainable and affordable solutions customized to your needs, earning us a reputation for excellence in the industry. Let us help you harness the power of solar energy today for a greener tomorrow.</p>
+    <div class="contact-details">
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> D2/541, Vikalp Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d151842.45001418184!2d80.96986446040474!3d26.887931834467164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x399c395732bec399%3A0x5d575353c6237e6a!2sD2%2F541%2C%20Vikalp%20Khand%2C%20Gomti%20Nagar%2C%20Gomti%20Nager%2C%20Lucknow%2C%20Uttar%20Pradesh%20226010!3m2!1d26.8650961!2d81.03444549999999!5e0!3m2!1sen!2sin!4v1729804087624!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:customercare@newpious.com">customercare@newpious.com</a></p>
+        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+915223137400">+91 522 313 7400</a></p>
+        <p><strong>Website:</strong> <a href="https://newpious.com/" target="_blank" class="button">Visit our website</a></p>
+    </div>
+</div>
+<script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyBotvuVbYXfVGyzEqmQ6ilGysFsecpIkS7HhuAeHJ8VedUhyjcCOcAkLfv8c6N6xL1/exec'
+      const form = document.forms['google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+          .catch(error => console.error('Error!', error.message))
+      })
+     </script>
+  </body>
+  </center>
+</html>

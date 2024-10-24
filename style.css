@@ -1,0 +1,619 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Keyframe Animation for Heading */
+@keyframes fadeIn {
+    0% {
+      color: black;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+      color: orange;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #333;
+    animation: fadeIn 1s ease-in; /* Apply the fade-in animation */
+}
+
+h3 {
+    text-align: center;
+    color: #007bff;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #000; /* Initially black */
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+/* Focus Styles */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Blue on focus */
+    outline: none;
+}
+
+/* Validation Styles */
+input:invalid {
+    border-color: #dc3545; /* Red for invalid input */
+}
+
+input:valid {
+    border-color: #28a745; /* Green for valid input */
+}
+
+/* Hover Effects */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #007bff; /* Blue on hover */
+}
+
+/* Submit Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .card {
+        position: relative; /* Changed to relative on mobile */
+        width: 100%; /* Make card full-width on mobile */
+        margin-top: 15px; /* Add margin above the card */
+    }
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    width: 300px; /* Fixed width for the card */
+    text-align: center; /* Centered text */
+    position: fixed; /* Fix the position of the card */
+    top: 20px; /* Set the top margin */
+    right: 20px; /* Set a right margin */
+    z-index: 1000; /* Ensure the card is on top */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+/* Logo styling */
+.logo {
+    width: 100px; /* Set logo width */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Heading styling */
+h2 {
+    color: #333; /* Dark gray color for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Description styling */
+.description {
+    color: #555; /* Slightly lighter gray for description text */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+/* Contact details styling */
+.contact-details {
+    text-align: left; /* Align contact details to the left */
+}
+
+.contact-details p {
+    margin: 8px 0; /* Space between contact details */
+}
+
+/* Link styling */
+a {
+    color: #ff7e5f; /* Attractive color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Keyframe Animation for Heading */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #333;
+    animation: fadeIn 1s ease-in; /* Apply the fade-in animation */
+}
+
+h3 {
+    text-align: center;
+    color: #007bff;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #000; /* Initially black */
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+/* Focus Styles */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Blue on focus */
+    outline: none;
+}
+
+/* Validation Styles */
+input:invalid {
+    border-color: #dc3545; /* Red for invalid input */
+}
+
+input:valid {
+    border-color: #28a745; /* Green for valid input */
+}
+
+/* Hover Effects */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #007bff; /* Blue on hover */
+}
+
+/* Submit Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .card {
+        position: relative; /* Changed to relative on mobile */
+        width: 100%; /* Make card full-width on mobile */
+        margin-top: 15px; /* Add margin above the card */
+      
+    }
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    width: 300px; /* Fixed width for the card */
+    text-align: center; /* Centered text */
+    position: fixed; /* Fix the position of the card */
+    top: 10px; /* Set the top margin */
+    right: 20px; /* Set a right margin */
+    z-index: 1000; /* Ensure the card is on top */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+/* Logo styling */
+.logo {
+    width: 100px; /* Set logo width */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Heading styling */
+h2 {
+    color: #333; /* Dark gray color for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Description styling */
+.description {
+    color: #555; /* Slightly lighter gray for description text */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+/* Contact details styling */
+.contact-details {
+    text-align: left; /* Align contact details to the left */
+}
+
+.contact-details p {
+    margin: 8px 0; /* Space between contact details */
+}
+
+/* Link styling */
+a {
+    color: #ff7e5f; /* Attractive color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+.first-heading {
+    font-family: 'Arial', sans-serif; /* Choose a clean and professional font */
+    font-size: 3rem; /* Large font size for prominence */
+    color: #4A90E2; /* Soft blue color for a modern look */
+    text-align: center; /* Center align the heading */
+    margin: 20px 0; /* Margin above and below the heading */
+    animation: fadeInUp 1s ease-in-out; /* Apply the keyframe animation */
+}
+
+/* Keyframe animation for fadeInUp effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(30px); /* Start 30px lower */
+    }
+    50% {
+        opacity: 0.5; /* Halfway point opacity */
+        transform: translateY(15px); /* Move closer to final position */
+    }
+    100% {
+        opacity: 1; /* End fully opaque */
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+/* Optional: Adding text shadow for depth */
+.first-heading {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+.card {
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+    width: 80%; /* Set the card width to 80% */
+    max-width: 800px; /* Optional: Set a maximum width */
+    margin: 0 auto; /* Center the card horizontally */
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Center text */
+    position: relative; /* Ensure proper positioning */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Logo styling */
+.logo {
+    width: 100px; /* Set logo width */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Heading styling */
+h2 {
+    font-size: 1.5rem; /* Font size for the heading */
+    color: #333; /* Dark gray color for the text */
+    margin: 10px 0; /* Margin for the heading */
+}
+
+/* Description styling */
+.description {
+    font-size: 0.9rem; /* Font size for the description */
+    color: #666; /* Light gray color for the text */
+    margin-bottom: 15px; /* Margin below the description */
+}
+
+/* Contact details styling */
+.contact-details {
+    font-size: 0.9rem; /* Font size for contact details */
+    color: #333; /* Dark gray color for text */
+    text-align: left; /* Align contact details to the left */
+}
+
+/* Style for the iframe (Google Map) */
+iframe {
+    width: 100%; /* Make iframe responsive */
+    height: 200px; /* Fixed height for the map */
+    border: 0; /* Remove border */
+    border-radius: 4px; /* Round corners of the map */
+    margin-bottom: 15px; /* Space below the map */
+}
+
+/* Link styling */
+a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .card {
+        width: 95%; /* Full width on small screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .logo {
+        width: 80px; /* Adjust logo size */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Smaller font size for the heading */
+    }
+
+    .description, .contact-details {
+        font-size: 0.85rem; /* Smaller font size for text */
+    }
+
+    iframe {
+        height: 150px; /* Reduce height of the map on small screens */
+    }
+}
+
+.card {
+    width: 80%; /* Set the card width to 80% */
+    max-width: 800px; /* Optional: Set a maximum width */
+    margin: 0 auto; /* Center the card horizontally */
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Center text */
+    position: relative; /* Ensure proper positioning */
+    overflow: hidden; /* Prevent overflow */
+/*   margin-left:13%; */
+}
+
+/* Logo stFor over 20 years, we have been a trusted provider of Solar System/Services in India. Our expert team delivers sustainable and affordable solutions customized to your needs, earning us a reputation for excellence in the industry. Let us help you harness the power of solar energy today for a greener tomorrow.yling */
+.logo {
+    width: 100px; /* Set logo width */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Heading styling */
+h2 {
+    font-size: 1.5rem; /* Font size for the heading */
+    color: Green; /* Dark gray color for the text */
+    margin: 10px 0; /* Margin for the heading */
+}
+
+/* Description styling */
+.description {
+    font-size: 0.6rem; /* Font size for the description */
+    color: #666; /* Light gray color for the text */
+    margin-bottom: 15px; /* Margin below the description */
+}
+
+/* Contact details styling */
+.contact-details {
+    font-size: 0.9rem; /* Font size for contact details */
+    color: #333; /* Dark gray color for text */
+    text-align: left; /* Align contact details to the left */
+}
+
+/* Style for the iframe (Google Map) */
+iframe {
+    width: 100%; /* Make iframe responsive */
+    height: 200px; /* Fixed height for the map */
+    border: dotted 3px black; /* Remove border */
+    border-radius: 4px; /* Round corners of the map */
+    margin-bottom: 15px; /* Space below the map */
+  
+}
+
+/* Icon styling */
+.contact-details i {
+   
+   
+    color: #007BFF; /* Blue color for icons */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Link styling */
+a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Button styling */
+.button {
+    display: inline-block; /* Make link behave like a button */
+    background-color: #007BFF; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 4px; /* Round corners */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-top: 10px; /* Margin above the button */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+   justify-content:center;
+      align-items:center;
+      text-align:center;
+  
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .card {
+        width: 95%; /* Full width on small screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .logo {
+        width: 80px; /* Adjust logo size */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Smaller font size for the heading */
+    }
+
+    .description, .contact-details {
+        font-size: 0.85rem; /* Smaller font size for text */
+    }
+
+    iframe {
+        height: 150px; /* Reduce height of the map on small screens */
+    }
+
+    .button {
+        padding: 8px 15px; /* Reduce button padding */
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      
+    }
+}
